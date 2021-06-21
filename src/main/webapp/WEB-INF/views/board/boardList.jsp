@@ -13,13 +13,6 @@
 		padding: 10px;
 	}
 </style>
-<script>
-	function pagination(page) {
-		var title = ''; // »ý·«
-		var pageUnit = document.getElementById('pageUnit').value;
-		location.href = '/boardList?title=' + title + '&cp=' + page + '&pageUnit=' + pageUnit;
-	}
-</script>
 </head>
 <body>
 	LIST CNT : 
@@ -61,5 +54,13 @@
 			<li><a href="javascript: pagination('${finalPage}');">&gt;&gt;</a></li>
 		</c:if>
 	</ul>
+	
+	<script>
+	function pagination(page) {
+		var title = ''; 
+		var pageUnit = document.getElementById('pageUnit').value;
+		location.href = '/boardList?title=' + title + '&cp=' + page + '&pageUnit=' + pageUnit;
+	}
+	</script>
 </body>
 </html>
